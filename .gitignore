@@ -1,5 +1,5 @@
-tools/*/main_client.py
-examples/food_incidents_articles_fullfilled
+examples/tools/*/main_client.py
+examples/workflows/food_incidents_articles_fullfilled
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
