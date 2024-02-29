@@ -13,14 +13,6 @@ To use the Stelar Operator, the user must install and setup all necessary compon
 
 ## Examples
 
-We have prepared a demo workflow where the user can see how to design workflows with Stelar Operator. In this workflow, there are two operators: the first one downloads daily articles from [GDELT](https://www.gdeltproject.org/) and filters them to include only datasets related to food incidents and the second one performs a deduplication using [TokenJoin](https://github.com/alexZeakis/TokenJoin).
+We have prepared some workflows where the user can see how to design workflows with Stelar Operator. In the [demos section](https://github.com/stelar-eu/stelar-operator-airflow/tree/main/workflows/demos/), the user can find demo workflows on how to use one of the KLMS tools individually and in the [use-case section](https://github.com/stelar-eu/stelar-operator-airflow/tree/main/workflows/use_cases/) the user can find implementations of the existing use-cases, where the KLMS tools are combined together.
 
-### Setup
-1. First, the user must deploy all existing tools. For this example we have two tools:
-   1. The downloader found in ``/examples/tools/download_gdelt`` and can be initiated by ``python /examples/tools/download_gdelt/main_service.py``. This service runs under port 9066. If needed, the user must change it by hand.
-   2. The deduplicator found in ``/examples/tools/deduplicate_gdelt`` and can be initiated by ``python /examples/tools/deduplicate_gdelt/main_service.py``. This service runs under port 9067. Again, if needed, the user must change it by hand.
-3. For the workflows, each DAG is found under ``/examples/workflows/food_incidents_articles/dag.py``. The content of the ``/examples/workflows/`` must be placed under the directory which airflow expected to discover dags, by default called ``dags/``. Before that, the user must change all necessary information in the ``dag.py``, which are the ports that the tools can be found and the necessary information to communicate with the catalog and the data storage. These steps can be traced [here](https://github.com/stelar-eu/klms-core-components-setup).
-4. Finally, the file ``STELAR_operator.py`` should be copied inside ``dags/custom_operators/STELAR_operator.py``.
-
-### Results
-If all work in perfection, the user will see completed dag_runs in the Airflow platform, published datasets in the catalog, published files in the data storage and tracked parameters and metrics in the tracking server.
+More information about the KMLS tools can be found [here](https://github.com/stelar-eu/stelar-operator-airflow/tree/main/tools/).

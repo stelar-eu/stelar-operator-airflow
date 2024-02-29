@@ -1,0 +1,9 @@
+{
+    "user": {
+        "username": "user",
+        "password": "XXXXXXXXXXXXX",
+        "CKAN_Token": "XXXXXXXXXXXXX",
+        "minio_id": "XXXXXXXXXXXXX",
+        "minio_key": "XXXXXXXXXXXXX"
+    }
+}

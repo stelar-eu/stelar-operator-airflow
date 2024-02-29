@@ -1,0 +1,18 @@
+{
+   "username":"XXXXXXX",
+   "password":"XXXXXXX",
+   "input":[
+      "YYYYYYYYY"
+   ],
+   "tools":{
+      "entity_extraction":{
+         "output_file":"test.csv",
+         "text_column":"description",
+         "csv_delimiter":",",
+         "N":100,
+         "extraction_type":"food",
+         "model":"instafoodroberta",
+         "syntactic_analysis_tool":"spacy",
+      }
+   }
+}

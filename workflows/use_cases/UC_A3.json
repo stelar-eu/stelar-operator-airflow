@@ -1,0 +1,30 @@
+{
+   "username":"XXXXXXX",
+   "password":"XXXXXXX",
+   "input":[
+      "YYYYYYYYY",
+      "YYYYYYYYY"
+   ],
+   "tools":{
+      "entity_extraction":{
+          "output_file":"out.csv",
+          "text_column":"description",
+          "csv_delimiter":",",
+          "N":100,
+          "extraction_type":"food",
+          "model":"instafoodroberta",
+          "syntactic_analysis_tool":"stanza"
+      },
+      "entity_linking":{
+         "col_id_left":1,
+         "col_text_left":2,
+         "separator_left":" ",
+         "col_id_right":0,
+         "col_text_right":1,
+         "separator_right":" ",
+         "k":1,
+         "delta_alg":"1",
+         "output_file":"out.csv"
+      }
+   }
+}
